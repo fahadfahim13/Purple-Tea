@@ -2,7 +2,7 @@ import { Product } from 'components/ProductCard/types';
 import airpods from 'media/images/airpods.png';
 import purple1 from 'media/images/purple_tea1.jpg';
 import turtleneck from 'media/images/turtleneck.png';
-import harman from 'media/images/harman.png';
+// import harman from 'media/images/harman.png';
 import garmin from 'media/images/garmin.png';
 import iphone from 'media/images/iphone.png';
 import hdphn from 'media/images/hdphn.png';
