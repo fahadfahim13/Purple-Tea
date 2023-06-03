@@ -24,9 +24,9 @@ export interface ButtonProps {
 const GlobalStyle = createGlobalStyle`
   *{
     box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-  font-family: 'Montserrat', sans-serif;
+    margin: 0;
+    padding: 0;
+    font-family: 'Montserrat', sans-serif;
   }
 `;
 
@@ -43,12 +43,12 @@ export const Container = styled.div`
 
 export const Button = styled.button`
   border-radius: 4px;
-  background: #fff;
+  background: #5c6ac4;
   white-space: nowrap;
   padding: 2% 2%;
-  color: #161d25;
+  color: #fff;
   outline: none;
-  border: 2px solid #161d25;
+  border: 2px solid #5c6ac4;
   cursor: pointer;
   overflow: hidden;
   width: 100%;
@@ -61,9 +61,9 @@ export const Button = styled.button`
   line-height: 24px;
 
   &:hover {
-    color: #fff;
-    background: #5c6ac4;
-    border: 2px solid #5c6ac4;
+    color: #161d25;
+    background: #fff;
+    border: 2px solid #161d25;
   }
 `;
 

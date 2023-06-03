@@ -10,6 +10,12 @@ export const ProductColumn = styled(motion.div)`
 	padding: 10px;
 	border: 1px solid #F1F1F1;
 	border-radius: 8px;
+	&:hover, :focus {
+		border: 0.5px solid #60c5a8;
+  		box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 10px 0px,
+    		rgba(0, 0, 0, 0.5) 0px 2px 25px 0px;
+		transition: all 0.3s ease-in-out 0s;
+	}
 `;
 
 export const SaleButton = styled(motion.button)`

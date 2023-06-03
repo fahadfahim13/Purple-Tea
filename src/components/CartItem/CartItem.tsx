@@ -26,9 +26,13 @@ const CartItem = (cartItem: CartProps) => {
                 </Row>
                 <Row style={{ paddingLeft: '10px' }}>
                     <Col style={{ padding: '0px' }}>
-                        <CartItemCategoryTitle color='#161D25' fontSize='16px' fontWeight={700}> ${(product.curPrice * amount).toFixed(2)} </CartItemCategoryTitle>
+                        <CartItemCategoryTitle color='#161D25' fontSize='16px' fontWeight={700}> ৳ {(product.curPrice * amount).toFixed(2)} </CartItemCategoryTitle>
                     </Col>
-                    <Col style={{ padding: '0px' }}><s><CartItemCategoryTitle style={{ paddingLeft: '1%' }} fontSize='16px'> ${((product.prevPrice ?? product.curPrice) * amount).toFixed(2)} </CartItemCategoryTitle></s></Col>
+                    {(product.prevPrice && product.prevPrice > product.curPrice) && <Col style={{ padding: '0px' }}>
+                        <s>
+                        <CartItemCategoryTitle style={{ paddingLeft: '1%' }} fontSize='16px'> ৳ {((product.prevPrice ?? product.curPrice) * amount).toFixed(2)} </CartItemCategoryTitle>
+                        </s>
+                    </Col>}
                     <Col></Col>
                     <Col>
                         <SimpleButton>

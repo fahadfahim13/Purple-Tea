@@ -1,9 +1,22 @@
+import { useState } from 'react';
 import { Product } from 'components/ProductCard/types';
 import { useAppDispatch, useAppSelector } from 'store/hooks';
 import { handleUpdateProducts } from 'store/Products/actions';
 import { selectProducts } from 'store/Products/selectors';
+import { ALL_PRODUCTS } from 'data/products';
 
 const useProductsLogic = () => {
+  const [product, onProductSelect] = useState<Product>(ALL_PRODUCTS[0]);
+  const [openDetails, setOpen] = useState(false);
+
+  const handleDetailsClose = () => {
+    setOpen(true);
+  }
+
+  const handleDetailsOpen = () => {
+    setOpen(true);
+  }
+
   const dispatch = useAppDispatch();
   const allProducts = useAppSelector(selectProducts);
 
@@ -27,6 +40,11 @@ const useProductsLogic = () => {
     allProducts,
     onFavoriteChange,
     onRatingChange,
+    openDetails,
+    handleDetailsClose,
+    handleDetailsOpen,
+    product,
+    onProductSelect,
   };
 };
 

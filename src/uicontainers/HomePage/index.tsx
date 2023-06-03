@@ -1,10 +1,12 @@
 
 import React from "react";
 import BannerBackground from "../../Assets/home-banner-background.png";
-import BannerImage from "../../Assets/home-banner-image.png";
+import BannerImage from "../../Assets/banner.png";
 import { FiArrowRight } from "react-icons/fi";
+import { useNavigate } from "react-router-dom";
 
 const HomePage = () => {
+  const navigate = useNavigate();
   return (
     <div className="home-container">
       <div className="home-banner-container">
@@ -13,14 +15,13 @@ const HomePage = () => {
         </div>
         <div className="home-text-section">
           <h1 className="primary-heading">
-            Your Favourite Food Delivered Hot & Fresh
+            Quali-Tea
           </h1>
           <p className="primary-text">
-            Healthy switcher chefs do all the prep work, like peeding, chopping
-            & marinating, so you can cook a fresh food.
+          A healthy Colourful Sip
           </p>
-          <button className="secondary-button">
-            Order Now <FiArrowRight />{" "}
+          <button className="secondary-button" onClick={() => navigate('/products')}>
+            See All Products <FiArrowRight />{" "}
           </button>
         </div>
         <div className="home-image-section">

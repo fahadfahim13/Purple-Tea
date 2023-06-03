@@ -4,11 +4,15 @@ import { ProductWrapper } from './ProductContainerStyles';
 import { Container, Section } from 'styles/global';
 import useProductsLogic from './hook';
 import { ProductProps } from './types';
+import ProductDetails from 'pages/ProductDetails';
+import { Product } from 'components/ProductCard/types';
 
 const ProductsContainer = (props: ProductProps) => {
-  const { handleAddtoCart } = props;
-  const { allProducts, onFavoriteChange, onRatingChange } = useProductsLogic();
+  const { handleAddtoCart, handleProductSelect } = props;
+  const { allProducts, onFavoriteChange, onRatingChange, openDetails, handleDetailsClose, handleDetailsOpen } = useProductsLogic();
+  
   return (
+    <>
     <Section smPadding="50px 10px" position="relative" inverse id="about" style={{
       textAlign: 'center'
     }}>
@@ -28,12 +32,18 @@ const ProductsContainer = (props: ProductProps) => {
               isFavorite={product.isFavorite}
               onFavoriteChange={onFavoriteChange}
               image={product.image}
+              weight={product.weight}
               handleAddtoCart={handleAddtoCart}
+              openDetails={openDetails}
+              handleDetailsClose={handleDetailsClose}
+              handleDetailsOpen={handleDetailsOpen}
+              onProductSelect={handleProductSelect}
             />
           ))}
         </ProductWrapper>
       </Container>
     </Section>
+    </>
   );
 };
 

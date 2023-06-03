@@ -1,23 +1,35 @@
 import React from "react";
-import PickMeals from "../../Assets/pick-meals-image.png";
-import ChooseMeals from "../../Assets/choose-image.png";
-import DeliveryMeals from "../../Assets/delivery-image.png";
+import Immunity from "../../Assets/immunity.png";
+import Skin from "../../Assets/skin.png";
+import Hair from "../../Assets/hair.png";
+import Weight from "../../Assets/weight.png";
+import Heart from "../../Assets/heart.png";
 
-const Work = () => {
+const Benefits = () => {
   const workInfoData = [
     {
-      image: PickMeals,
-      title: "Pick Tea Product",
+      image: Immunity,
+      title: "Immunity",
       text: "Lorem ipsum dolor sit amet consectetur. Maecenas orci et sagittis duis elementum interdum facilisi bibendum.",
     },
     {
-      image: ChooseMeals,
-      title: "Choose Quantity",
+      image: Skin,
+      title: "Healthy Skin",
       text: "Lorem ipsum dolor sit amet consectetur. Maecenas orci et ",
     },
     {
-      image: DeliveryMeals,
-      title: "Get Delivered in your house",
+      image: Hair,
+      title: "Healthy Hair",
+      text: "Lorem ipsum dolor sit amet consectetur. Maecenas orci et lorem ipsum",
+    },
+    {
+      image: Weight,
+      title: "Weight Loss",
+      text: "Lorem ipsum dolor sit amet consectetur. Maecenas orci et lorem ipsum",
+    },
+    {
+      image: Heart,
+      title: "Healthy Heart",
       text: "Lorem ipsum dolor sit amet consectetur. Maecenas orci et lorem ipsum",
     },
   ];
@@ -25,7 +37,7 @@ const Work = () => {
     <div className="work-section-wrapper">
       <div className="work-section-top">
         {/* <p className="primary-subheading">Work</p> */}
-        <h1 className="primary-heading">How To Get</h1>
+        <h1 className="primary-heading">Benefits</h1>
         {/* <p className="primary-text">
           Lorem ipsum dolor sit amet consectetur. Non tincidunt magna non et
           elit. Dolor turpis molestie dui magnis facilisis at fringilla quam.
@@ -46,4 +58,4 @@ const Work = () => {
   );
 };
 
-export default Work;
+export default Benefits;
